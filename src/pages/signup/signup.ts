@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-signup',
+  templateUrl: 'signup.html'
 })
-export class AboutPage {
+export class SignupPage {
 
   constructor() {
 
