@@ -3,6 +3,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { SignupPage } from '../pages/signup/signup';
+import { SuccessPage } from '../pages/success/success';
+import { SliderPage } from '../pages/slider/slider';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -11,7 +13,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     SignupPage,
-    AboutPage
+    AboutPage,
+    SuccessPage,
+    SliderPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -20,7 +24,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     SignupPage,
-    AboutPage
+    AboutPage,
+    SuccessPage,
+    SliderPage
   ],
   providers: [
     StatusBar,

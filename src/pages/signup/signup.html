@@ -1,0 +1,56 @@
+<ion-content scrollbar-y-auto>
+  <div class="hu_page">
+
+    <div class="hu_header">
+      <h1>Basic Information</h1>
+      <h3>Get your UniPanda 🐼</h3>
+    </div>
+
+    <div class="hu_body">
+      <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>DOB</ion-label>
+        <ion-input type="date" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Nationality</ion-label>
+        <ion-select [(ngModel)]="nationality">
+          <ion-option value="chinese">Chinese</ion-option>
+          <ion-option value="english">English</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Current School</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Current Major</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Current GPA</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+      <button ion-button>Continue</button>
+
+    </div>
+
+  </div>
+</ion-content>
