@@ -28,4 +28,8 @@ export class SliderPage {
     this.slides.slideTo(2, 500);
   }
 
+  resetSubmitted( evt ) {
+    this.slides.slideTo(0, 100);
+  }
+
 }

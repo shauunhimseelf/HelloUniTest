@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'page-success',
@@ -8,6 +8,13 @@ export class SuccessPage {
 
   constructor() {
 
+  }
+
+  @Output()
+  resetSubmitted:EventEmitter<string> = new EventEmitter();
+
+  submitReset() {
+    this.resetSubmitted.emit('resetSubmitted');
   }
 
 }
