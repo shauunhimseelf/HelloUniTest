@@ -6,12 +6,13 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
   selector: 'page-signup',
   templateUrl: 'signup.html',
 })
+
 export class SignupPage {
   private signup : FormGroup;
 
   constructor( private formBuilder: FormBuilder ) {
     this.signup = this.formBuilder.group({
-      name: ['', Validators.required, ],
+      name: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.maxLength(60)])],
       dob: ['', Validators.required],
       gender: ['', Validators.required],
       nationality: ['', Validators.required],
@@ -21,15 +22,11 @@ export class SignupPage {
     })
   }
 
-  logSignup() {
-    console.log(this.signup.value);
-  }
-
   @Output()
-  signupSubmitted:EventEmitter<string> = new EventEmitter();
+  signupSubmitted:EventEmitter<Object> = new EventEmitter();
 
-  submitSignup() {
-    this.signupSubmitted.emit('signupSubmit');
+  logSignup() {
+    this.signupSubmitted.emit(this.signup.value);
   }
 
 }

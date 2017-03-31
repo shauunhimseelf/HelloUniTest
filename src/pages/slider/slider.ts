@@ -10,6 +10,8 @@ import { Slides } from 'ionic-angular';
 })
 export class SliderPage {
 
+  private userDetails : Object;
+
   @ViewChild(Slides) slides: Slides;
 
   constructor() {
@@ -21,6 +23,7 @@ export class SliderPage {
   }
 
   signupSubmitted( evt ) {
+    console.log(evt);
     this.slides.slideTo(1, 500);
   }
 
