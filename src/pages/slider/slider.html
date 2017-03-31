@@ -1,10 +1,10 @@
-<ion-slides pager>
+<ion-slides>
   <ion-slide>
-    <page-signup></page-signup>
+    <page-signup (signupSubmitted)="signupSubmitted($event)"></page-signup>
   </ion-slide>
   <ion-slide>
-    <page-about></page-about>
-  </ion-slide>
+    <page-about (aboutSubmitted)="aboutSubmitted($event)"></page-about>
+  </ion-slide>"
   <ion-slide>
     <page-success></page-success>
   </ion-slide>
