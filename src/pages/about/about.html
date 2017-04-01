@@ -1,4 +1,4 @@
-<ion-content scrollbar-y-auto (tabPressed)="handleLabelPressed($event)">
+<ion-content scrollbar-y-hidden>
   <div class="hu_page">
 
     <div class="hu_header">
@@ -27,7 +27,7 @@
         <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" (tabPressed)="handleLifestylePressed($event)"></tab-button>
       </div>
 
-      <button ion-button (click)="submitAbout()">Go</button>
+      <button class="nextButton" ion-button (click)="submitAbout()">Go</button>
     </div>
 
   </div>
