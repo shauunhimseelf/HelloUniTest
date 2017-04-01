@@ -1,0 +1,29 @@
+@import '_mixins.scss';
+
+html {
+  font-size: 8px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+@include tablet {
+  html {
+    font-size: 10px;
+  }
+}
+
+@include desktop {
+  html {
+    font-size: 12px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}

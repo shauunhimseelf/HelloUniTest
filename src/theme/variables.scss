@@ -1,7 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
 $font-path: "../assets/fonts";
-
 @import "ionic.globals";
 
 
@@ -13,6 +12,33 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 //
 
+ion-item {
+  margin: 0 0 1rem !important;
+  border-radius: 8px !important;
+  height: 3rem !important;
+
+  ion-label {
+    font-weight: bold !important;
+    margin: 8px 4px 8px 0 !important;
+    color: #1e1e1e !important;
+  }
+
+  .item-inner {
+    border: none !important;
+    height: inherit !important;
+  }
+
+}
+
+[ion-button] {
+  &.nextButton {
+    display: block;
+    margin: 1rem auto 1rem;
+    width: 50%;
+    padding: 1rem;
+    font-size: 80% !important;
+  }
+}
 
 
 
@@ -29,14 +55,19 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  white:      #ffffff
 );
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+.ios {
+  .hu_header {
+    padding-top: 20px;
+  }
+}
 
 
 // App Material Design Variables
@@ -61,7 +92,6 @@ $colors: (
 // default are overridden.
 
 @import "ionic.theme.default";
-
 
 // Ionicons
 // --------------------------------------------------

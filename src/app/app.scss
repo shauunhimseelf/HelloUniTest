@@ -15,21 +15,21 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+@import "partials/_typography.scss";
+@import "partials/_shadows.scss";
+@import "partials/_mixins.scss";
+
 
 .hu_page {
-  background-color: white;
-  color: #1e1e1e;
+  background-color: map-get($colors, white);
+  color: map-get($colors, dark);
   width: 100%;
   height: 94vh;
   display: flex;
   flex-direction: column;
-}
 
-.ios {
-  .hu_header {
-    padding-top: 20px;
+  @include desktop {
+    display: flex;
   }
 }
 
@@ -40,7 +40,8 @@ $desktop: "(min-width: 1024px)";
   background: -webkit-radial-gradient(center, ellipse cover, #87e0fd 0%,#58a4f9 100%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #87e0fd 0%,#58a4f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#58a4f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  color: #ffffff;
+
+  color: map-get($colors, white);
   flex: 3;
   justify-content: center;
   align-items: center;
@@ -49,55 +50,41 @@ $desktop: "(min-width: 1024px)";
   justify-content: center;
   align-items: center;
 
-  h1, h3 {
-    margin: 0;
-    padding: 0;
-  }
-
   h1 {
     font-weight: bold;
-    font-size: 1em;
-    margin-bottom: 0.5em;
+    font-size: 2.4rem;
   }
 
   h3 {
-    font-size: 0.8em;
+    font-size: 1.8rem;
   }
 
-  @media #{$tablet} {
-    h1 {
-      font-size: 1.2em;
-    }
-    h3 {
-      font-size: 1em;
-    }
-  }
+  @include desktop {
+    flex: 2;
 
-  @media #{$desktop} {
     h1 {
-      font-size: 2em;
+      font-size: 2.4rem;
     }
+
     h3 {
-      font-size: 1.4em;
+      font-size: 1.6rem;
     }
   }
 
 }
 
 .hu_body {
-  color: #1e1e1e;
+  color: map-get($colors, dark);
   flex: 7;
   text-align: left;
   padding: 1rem;
   overflow-y: auto;
 
-  .nextButton {
-    display: block;
-    margin: 3rem auto 1rem;
+  @include desktop {
     width: 50%;
+    margin: 0 auto;
+    max-width: 900px;
   }
-
-
 }
 
 .scroll-view {
@@ -109,48 +96,7 @@ $desktop: "(min-width: 1024px)";
 }
 
 ion-item {
-  margin: 1rem 0 !important;
-  border-radius: 8px !important;
-  min-height: 2rem !important;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4)!important;
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4)!important;
-  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.4)!important;
-
-  font-size: 1.1rem !important;
-
-  @media #{$tablet} {
-    h1 {
-      font-size: 1.2em;
-    }
-    h3 {
-      font-size: 1em;
-    }
-  }
-
-  @media #{$desktop} {
-    h1 {
-      font-size: 2em;
-    }
-    h3 {
-      font-size: 1.4em;
-    }
-  }
-
-  ion-label {
-    font-weight: bold;
-    margin: 8px 4px 8px 0 !important;
-    color: #1e1e1e!important;
-  }
-
-  .item-inner {
-    border: none !important;
-    height: 3rem;
-  }
-
-}
-
-.text-input-wp {
-
+  @include shadow-basic;
 }
 
 [scrollbar-y-hidden] .scroll-content {
