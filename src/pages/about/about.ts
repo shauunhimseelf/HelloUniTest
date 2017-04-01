@@ -50,12 +50,16 @@ export class AboutPage {
 
   }
 
+  removeLabel( evt ) {
+    console.log('removeLabel');
+  }
+
   submitAbout() {
     let obj = {
       label : this.userLabels,
       Lifestyle: this.userLifestyles
     }
-    
+
     this.aboutSubmitted.emit(obj);
   }
 

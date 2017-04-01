@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /*
   Generated class for the Test component.
@@ -12,7 +12,13 @@ import { Component } from '@angular/core';
 })
 export class TestComponent {
 
+  @Input('text') textToUse;
+
   text: string;
+
+  ngAfterViewInit() {
+    this.text = this.textToUse;
+  }
 
   constructor() {
     console.log('Hello Test Component');
