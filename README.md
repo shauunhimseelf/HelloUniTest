@@ -1,6 +1,6 @@
 # Hello Uni Code Test
 
-Code test for Hello Uni Job application. This is my first time using Ionic and Angular 2, so I'll probably document here some of the changes I'd like to make with a bit more experience with the platform. 
+Code test for Hello Uni Job application. This is my first time using Ionic and Angular 2, so I'll probably document here some of the changes I'd like to make with a bit more experience with the platform.
 
 ## Todos
 
@@ -16,7 +16,7 @@ Code test for Hello Uni Job application. This is my first time using Ionic and A
 - [ ] Remove skip button
 - [ ] Validation styles
 - [ ] Add validation styles to dropdowns
-- [ ] Final styling 
+- [ ] Final styling
 
 ### About page
 - [ ] Add 'tabs' to buttons
@@ -25,7 +25,7 @@ Code test for Hello Uni Job application. This is my first time using Ionic and A
 - [ ] Test
 
 ### Success page
-- [ ] Make the console log output readable 
+- [ ] Make the console log output readable
 - [ ] Download better Panda gif
 - [ ] Firebase to record previous responses
 
