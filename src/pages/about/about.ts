@@ -17,13 +17,10 @@ export class AboutPage {
   }
 
   @Output()
-  aboutSubmitted:EventEmitter<Array<Array<String>>> = new EventEmitter();
+  aboutSubmitted:EventEmitter<Object> = new EventEmitter();
 
-  submitAbout() {
-    this.aboutSubmitted.emit([this.userLabels, this.userLifestyles]);
-  }
 
-  // TODO Merge functions
+  // TODO Merge handleLabelPressed and handleLifestylePressed functions
 
   handleLabelPressed( evt ) {
 
@@ -51,6 +48,15 @@ export class AboutPage {
       this.userLifestyles.splice( arrIndex, 1 );
     }
 
+  }
+
+  submitAbout() {
+    let obj = {
+      label : this.userLabels,
+      Lifestyle: this.userLifestyles
+    }
+    
+    this.aboutSubmitted.emit(obj);
   }
 
 }

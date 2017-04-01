@@ -16,17 +16,6 @@ export class SliderPage {
   @ViewChild(Slides) slides: Slides;
 
   constructor() {
-    this.userDetails = {
-      name: "",
-      dob: "",
-      gender: "",
-      nationality: "",
-      current_school: "",
-      current_major: "",
-      current_gpa: "",
-      label: [],
-      Lifestyle: []
-    }
 
   }
 
@@ -42,6 +31,7 @@ export class SliderPage {
   aboutSubmitted( evt ) {
     this.slides.slideTo(2, 500);
     this.updateUserDetails(evt);
+    console.log(this.userDetails);
   }
 
   resetSubmitted( evt ) {
