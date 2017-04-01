@@ -16,17 +16,6 @@ export class SliderPage {
   @ViewChild(Slides) slides: Slides;
 
   constructor() {
-    this.userDetails = {
-      name: "",
-      dob: "",
-      gender: "",
-      nationality: "",
-      current_school: "",
-      current_major: "",
-      current_gpa: "",
-      label: [],
-      Lifestyle: []
-    }
 
   }
 

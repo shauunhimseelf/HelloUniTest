@@ -1,4 +1,4 @@
-<ion-content scrollbar-y-auto>
+<ion-content scrollbar-y-auto (tabPressed)="handleLabelPressed($event)">
   <div class="hu_page">
 
     <div class="hu_header">
@@ -9,35 +9,13 @@
     <div class="hu_body">
       <div class="hu_personality_selected">
         <ion-item>
+          <!-- <test *ngFor="let userLabel of userLabels" text="{{userLabel}}"></test> -->
           <ion-label fixed>Choose your own label...</ion-label>ion-label>
           <ion-input type="text" value=""></ion-input>
         </ion-item>
       </div>
       <div class="hu_buttonContainer">
-        <button ion-button icon-left class="labelButton selected">
-          <ion-icon name="add"></ion-icon>
-          Out-going
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Reserved
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Sporty
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Routine
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Flexible
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Neutral
-        </button>
+        <tab-button *ngFor="let label of labels" text="{{ label }}" (tabPressed)="handleLabelPressed($event)"></tab-button>
       </div>
       <div class="hu_lifestyle_selected">
         <ion-item>
@@ -46,32 +24,10 @@
         </ion-item>
       </div>
       <div class="hu_buttonContainer">
-        <button ion-button icon-left class="labelButton selected">
-          <ion-icon name="add"></ion-icon>
-          Fast
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Party
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Quiet
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Posh
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Budget
-        </button>
-        <button ion-button icon-left class="labelButton">
-          <ion-icon name="add"></ion-icon>
-          Neutral
-        </button>
+        <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" (tabPressed)="handleLifestylePressed($event)"></tab-button>
       </div>
-        <button ion-button (click)="submitAbout()">Go</button>
+
+      <button ion-button (click)="submitAbout()">Go</button>
     </div>
 
   </div>
