@@ -5,6 +5,7 @@ import { AboutPage } from '../pages/about/about';
 import { SignupPage } from '../pages/signup/signup';
 import { SuccessPage } from '../pages/success/success';
 import { SliderPage } from '../pages/slider/slider';
+import { TabButtonComponent } from '../components/tab-button/tab-button';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignupPage,
     AboutPage,
     SuccessPage,
-    SliderPage
+    SliderPage,
+    TabButtonComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)

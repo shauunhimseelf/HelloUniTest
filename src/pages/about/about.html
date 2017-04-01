@@ -1,4 +1,4 @@
-<ion-content scrollbar-y-auto>
+<ion-content scrollbar-y-auto (tabPressed)="handleLabelPressed($event)">
   <div class="hu_page">
 
     <div class="hu_header">
@@ -9,17 +9,13 @@
     <div class="hu_body">
       <div class="hu_personality_selected">
         <ion-item>
+          <!-- <test *ngFor="let userLabel of userLabels" text="{{userLabel}}"></test> -->
           <ion-label fixed>Choose your own label...</ion-label>ion-label>
           <ion-input type="text" value=""></ion-input>
         </ion-item>
       </div>
-      <div class="hu_personality_buttons">
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
+      <div class="hu_buttonContainer">
+        <tab-button *ngFor="let label of labels" text="{{ label }}" (tabPressed)="handleLabelPressed($event)"></tab-button>
       </div>
       <div class="hu_lifestyle_selected">
         <ion-item>
@@ -27,15 +23,11 @@
           <ion-input type="text" value=""></ion-input>
         </ion-item>
       </div>
-      <div class="hu_lifestyle_buttons">
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
-        <button ion-button>Go</button>
+      <div class="hu_buttonContainer">
+        <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" (tabPressed)="handleLifestylePressed($event)"></tab-button>
       </div>
-        <button ion-button (click)="submitAbout()">Go</button>
+
+      <button ion-button (click)="submitAbout()">Go</button>
     </div>
 
   </div>

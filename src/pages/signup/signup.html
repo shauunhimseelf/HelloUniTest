@@ -7,49 +7,52 @@
     </div>
 
     <div class="hu_body">
-      <ion-item>
-        <ion-label fixed>Name</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
+      <form [formGroup]="signup" (ngSubmit)="logSignup()">
+        <ion-item>
+          <ion-label fixed>Name</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>DOB</ion-label>
-        <ion-input type="date" value=""></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label fixed>DOB</ion-label>
+          <ion-input type="date" formControlName="dob"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>Gender</ion-label>
-        <ion-select [(ngModel)]="gender">
-          <ion-option value="male">Male</ion-option>
-          <ion-option value="female">Female</ion-option>
-        </ion-select>
-      </ion-item>
+        <ion-item>
+          <ion-label fixed>Gender</ion-label>
+          <ion-select formControlName="gender">
+            <ion-option value="male">Male</ion-option>
+            <ion-option value="female">Female</ion-option>
+          </ion-select>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>Nationality</ion-label>
-        <ion-select [(ngModel)]="nationality">
-          <ion-option value="chinese">Chinese</ion-option>
-          <ion-option value="english">English</ion-option>
-        </ion-select>
-      </ion-item>
+        <ion-item>
+          <ion-label fixed>Nationality</ion-label>
+          <ion-select formControlName="nationality">
+            <ion-option value="chinese">Chinese</ion-option>
+            <ion-option value="english">English</ion-option>
+          </ion-select>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>Current School</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label fixed>Current School</ion-label>
+          <ion-input type="text" formControlName="current_school"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>Current Major</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label fixed>Current Major</ion-label>
+          <ion-input type="text" formControlName="current_major"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>Current GPA</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label fixed>Current GPA</ion-label>
+          <ion-input type="text" formControlName="current_gpa"></ion-input>
+        </ion-item>
 
-      <button ion-button (click)="submitSignup()">Continue</button>
+        <button ion-button type="submit" [disabled]="!signup.valid">Continue</button>
+        <button ion-button type="submit">HACKYCHEATREMOVE</button>
 
+      </form>
     </div>
 
   </div>
