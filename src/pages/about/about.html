@@ -13,7 +13,7 @@
           <ion-input type="text" value=""></ion-input>
         </ion-item>
       </div>
-      <div class="hu_buttonContainer">
+      <div class="hu_buttonContainer" (tabPressed)="handleLabelPressed($event)">
         <tab-button *ngFor="let label of labels" text="{{ label }}"></tab-button>
       </div>
       <div class="hu_lifestyle_selected">

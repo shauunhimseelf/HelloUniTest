@@ -9,6 +9,9 @@ export class AboutPage {
   labels = ['Out-going', 'Reserved', 'Sporty', 'Routine', 'Flexible', 'Neutral'];
   lifestyles = ['Fast', 'Party', 'Quiet', 'Posh', 'Budget', 'Neutral'];
 
+  userLabels = [];
+  userLifestyles = [];
+
   constructor() {
 
   }
@@ -18,6 +21,11 @@ export class AboutPage {
 
   submitAbout() {
     this.aboutSubmitted.emit('aboutSubmitted');
+  }
+
+  handleLabelPressed( evt ) {
+    console.log('handleLabelPressed');
+    console.log(evt);
   }
 
 }
