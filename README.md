@@ -5,28 +5,27 @@ Code test for Hello Uni Job application. This is my first time using Ionic and A
 ## Todos
 
 ### General
-- [ ] Create header component for page
-- [ ] Fix windows phone styling
-- [ ] Abstract out some of the SASS rules (drop shadow etc.)
+- [x] Fixed header styles
+- [] Fix windows phone styling
+- [x] Abstract out some of the SASS rules (drop shadow etc.)
 
 ### Desktop
-- [ ] Initial desktop styling
+- [x] Initial desktop styling
 
 ### Signup
-- [ ] Remove skip button
+- [x] Remove skip button
 - [ ] Validation styles
 - [ ] Add validation styles to dropdowns
-- [ ] Final styling 
+- [ ] Alignment of options 
 
 ### About page
 - [ ] Add 'tabs' to buttons
-- [ ] Fix android styling of buttons
+- [x] Fix android styling of buttons
 - [x] Componentize buttons
-- [ ] Test
 
 ### Success page
 - [ ] Make the console log output readable 
-- [ ] Download better Panda gif
+- [x] Download better Panda gif
 - [ ] Firebase to record previous responses
 
 ### The bit that should have been first
