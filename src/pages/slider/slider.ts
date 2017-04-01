@@ -32,6 +32,7 @@ export class SliderPage {
 
   ngAfterViewInit() {
     this.slides.onlyExternal = true;
+    this.slides.pager = true;
   }
 
   signupSubmitted( evt ) {
