@@ -17,15 +17,40 @@ export class AboutPage {
   }
 
   @Output()
-  aboutSubmitted:EventEmitter<string> = new EventEmitter();
+  aboutSubmitted:EventEmitter<Array<Array<String>>> = new EventEmitter();
 
   submitAbout() {
-    this.aboutSubmitted.emit('aboutSubmitted');
+    this.aboutSubmitted.emit([this.userLabels, this.userLifestyles]);
   }
 
+  // TODO Merge functions
+
   handleLabelPressed( evt ) {
-    console.log('handleLabelPressed');
-    console.log(evt);
+
+    const labelText = evt;
+    const arrIndex = this.userLabels.indexOf(labelText);
+
+    if( arrIndex === -1)
+    {
+      this.userLabels.push( labelText );
+    } else {
+      this.userLabels.splice( arrIndex, 1 );
+    }
+
+  }
+
+  handleLifestylePressed( evt ) {
+
+    const lifestyleText = evt;
+    const arrIndex = this.userLifestyles.indexOf(lifestyleText);
+
+    if( arrIndex === -1)
+    {
+      this.userLifestyles.push( lifestyleText );
+    } else {
+      this.userLifestyles.splice( arrIndex, 1 );
+    }
+
   }
 
 }

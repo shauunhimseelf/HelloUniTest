@@ -1,4 +1,4 @@
-<ion-content scrollbar-y-auto>
+<ion-content scrollbar-y-auto (tabPressed)="handleLabelPressed($event)">
   <div class="hu_page">
 
     <div class="hu_header">
@@ -13,8 +13,8 @@
           <ion-input type="text" value=""></ion-input>
         </ion-item>
       </div>
-      <div class="hu_buttonContainer" (tabPressed)="handleLabelPressed($event)">
-        <tab-button *ngFor="let label of labels" text="{{ label }}"></tab-button>
+      <div class="hu_buttonContainer">
+        <tab-button *ngFor="let label of labels" text="{{ label }}" (tabPressed)="handleLabelPressed($event)"></tab-button>
       </div>
       <div class="hu_lifestyle_selected">
         <ion-item>
@@ -23,7 +23,7 @@
         </ion-item>
       </div>
       <div class="hu_buttonContainer">
-        <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}"></tab-button>
+        <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" (tabPressed)="handleLifestylePressed($event)"></tab-button>
       </div>
 
       <button ion-button (click)="submitAbout()">Go</button>
