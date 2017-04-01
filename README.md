@@ -21,7 +21,7 @@ Code test for Hello Uni Job application. This is my first time using Ionic and A
 ### About page
 - [ ] Add 'tabs' to buttons
 - [ ] Fix android styling of buttons
-- [ ] Componentize buttons
+- [x] Componentize buttons
 - [ ] Test
 
 ### Success page
