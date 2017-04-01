@@ -6,7 +6,7 @@ Code test for Hello Uni Job application. This is my first time using Ionic and A
 
 ### General
 - [x] Fixed header styles
-- [] Fix windows phone styling
+- [ ] Fix windows phone styling
 - [x] Abstract out some of the SASS rules (drop shadow etc.)
 
 ### Desktop
