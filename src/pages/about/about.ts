@@ -6,6 +6,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class AboutPage {
 
+  labels = ['Out-going', 'Reserved', 'Sporty', 'Routine', 'Flexible', 'Neutral'];
+  lifestyles = ['Fast', 'Party', 'Quiet', 'Posh', 'Budget', 'Neutral'];
+
   constructor() {
 
   }

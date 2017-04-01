@@ -14,12 +14,7 @@
         </ion-item>
       </div>
       <div class="hu_buttonContainer">
-        <tab-button text="Out-going"></tab-button>
-        <tab-button text="Reserved"></tab-button>
-        <tab-button text="Sporty"></tab-button>
-        <tab-button text="Routine"></tab-button>
-        <tab-button text="Flexible"></tab-button>
-        <tab-button text="Neutral"></tab-button>
+        <tab-button *ngFor="let label of labels" text="{{ label }}"></tab-button>
       </div>
       <div class="hu_lifestyle_selected">
         <ion-item>
@@ -28,12 +23,7 @@
         </ion-item>
       </div>
       <div class="hu_buttonContainer">
-        <tab-button text="Party"></tab-button>
-        <tab-button text="Quiet"></tab-button>
-        <tab-button text="Reserved"></tab-button>
-        <tab-button text="Posh"></tab-button>
-        <tab-button text="Budget"></tab-button>
-        <tab-button text="Neutral"></tab-button>
+        <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}"></tab-button>
       </div>
 
       <button ion-button (click)="submitAbout()">Go</button>
