@@ -4,9 +4,34 @@
       text-align: right;
     }
 
-    ion-select {
-      text-align: right;
-      float: right;
+    ion-label{
+      flex: 1 0 30% !important;
     }
+
+    ion-select {
+      flex: 1 0 70%;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+
+      .select-icon {
+    		visibility: hidden;
+    	}
+      .select-text {
+        text-align: right;
+
+      }
+    }
+  }
+
+  input::-webkit-calendar-picker-indicator{
+      display: none;
+  }
+  input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+  }
+  input::-webkit-clear-button{
+    display: none;
   }
 }
