@@ -1,19 +1,16 @@
 .hu_body {
   ion-item {
-    ion-input input{
-      text-align: right;
-    }
 
-    ion-label{
-      flex: 1 0 30% !important;
+    ion-input{
+      input {
+        text-align: right;
+      }
     }
 
     ion-select {
-      flex: 1 0 70%;
+      // border: 1px dashed orange;
       flex-direction: row-reverse;
-      justify-content: flex-end;
-
-
+      width: 100%;
       .select-icon {
     		visibility: hidden;
     	}

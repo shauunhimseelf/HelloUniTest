@@ -36,6 +36,7 @@
       .tab_selectedContainer {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
       }
     }
   }
@@ -46,7 +47,6 @@
   }
 
   tab-button {
-    flex: 1;
     margin: 0 4px 8px;
 
     button {
