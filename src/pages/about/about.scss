@@ -1,36 +1,61 @@
 @import '../../app/app.scss';
 
-.hu_buttonContainer {
-  display: flex;
-  flex-wrap: wrap;
-}
+.hu_aboutPage {
 
-tab-button {
-  flex: 1;
-  margin: 0 4px 8px;
+  .hu_tabPanel {
+    margin-bottom: 2rem;
 
-  button {
-    width: 100%;
-    background-color: map-get($colors, white);
-    color: #9e9e9e;
-    border-radius: 3px;
-    height: auto;
-    margin: 0;
+    .tab_selector {
+      padding: 1rem;
+      border: 1px solid #efefef;
 
-    @include shadow-basic;
+      ion-input {
 
-    &.selected {
-      border: 1px  map-get($colors, primary) solid;
-      font-weight: bold;
-      color: map-get($colors, primary);
+        input {
+          text-align: left !important;
+          border: 1px solid #efefef;
+          font-size: 1.5rem;
+          margin: 0;
+        }
+      }
+
+      .tab_selectedText {
+        font-style: italic;
+        font-size: 1.2rem;
+        text-align: center;
+      }
     }
-
-    .button-inner {
-      float: left;
-      font-size: 1.5rem;
-      padding: 0;
-    }
-
   }
 
+  .hu_buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  tab-button {
+    flex: 1;
+    margin: 0 4px 8px;
+
+    button {
+      width: 100%;
+      background-color: map-get($colors, white);
+      color: #9e9e9e;
+      border-radius: 3px;
+      height: auto;
+      margin: 0;
+      @include shadow-basic;
+
+      &.selected {
+        border: 1px map-get($colors, primary) solid;
+        font-weight: bold;
+        color: map-get($colors, primary);
+      }
+
+      .button-inner {
+        float: left;
+        font-size: 1.5rem;
+        padding: 0;
+      }
+    }
+  }
 }
