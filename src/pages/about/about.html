@@ -36,7 +36,7 @@
         <div class="tab_selector">
           <h5>2. Choose lifestyles that describe you:</h5>
           <div class="tab_selectedContainer">
-            <tab-button *ngFor="let userLifestyle of userLifestyles" text="{{ userLabel }}" icon="close" selected="{{ true }}" (tabPressed)="removeLifestyle($event)" ></tab-button>
+            <tab-button *ngFor="let userLifestyle of userLifestyles" text="{{ userLifestyle }}" icon="close" selected="{{ true }}" (tabPressed)="removeLifestyle($event)" ></tab-button>
             <p class="tab_selectedText" *ngIf="userLifestyles.length === 0">No lifestyles selected.</p>
           </div>
           <form [formGroup]="addCustomLifestyleForm" (ngSubmit)="addCustomLifestyle()">
