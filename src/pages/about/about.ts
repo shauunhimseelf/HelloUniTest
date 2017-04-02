@@ -20,11 +20,11 @@ export class AboutPage {
 
   constructor( private formBuilder: FormBuilder ) {
     this.addCustomLabelForm = this.formBuilder.group({
-      customLabel: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.minLength(3)])]
+      customLabel: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.minLength(3), Validators.maxLength(20)])]
     })
 
     this.addCustomLifestyleForm = this.formBuilder.group({
-      customLifestyle: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.minLength(3)])]
+      customLifestyle: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.minLength(3), Validators.maxLength(20)])]
     })
   }
 
