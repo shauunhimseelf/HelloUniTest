@@ -27,8 +27,7 @@ export class TabButtonComponent {
 
 
   constructor( ) {
-    this.buttonSelected = this.isSelected;
-    this.buttonIcon = this.iconToUse;
+
   }
 
   ngAfterViewInit() {

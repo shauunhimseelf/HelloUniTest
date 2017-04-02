@@ -6,8 +6,8 @@
       <h3>Get your UniPanda 🐼</h3>
     </div>
 
-    <div class="hu_body">
-      <form [formGroup]="signup" (ngSubmit)="logSignup()">
+    <div class="hu_body" tabindex="-1">
+      <form [formGroup]="signup" (ngSubmit)="isValid($event)" >
         <ion-item>
           <ion-label fixed>Name</ion-label>
           <ion-input type="text" formControlName="name"></ion-input>
@@ -49,10 +49,9 @@
           <ion-input type="text" formControlName="current_gpa"></ion-input>
         </ion-item>
 
-        <button class="nextButton" ion-button type="submit" [disabled]="!signup.valid">Continue</button>
-        <!-- <button ion-button type="submit">HACKYCHEATREMOVE</button> -->
-
       </form>
+      <button class="nextButton" ion-button [disabled]="!signup.valid">Continue</button>
+
     </div>
 
   </div>

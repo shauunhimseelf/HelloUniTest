@@ -25,6 +25,15 @@ export class SignupPage {
   @Output()
   signupSubmitted:EventEmitter<Object> = new EventEmitter();
 
+  isValid( evt ) {
+    if(!this.signup.valid){
+      evt.preventDefault();
+    }
+    else {
+      this.logSignup();
+    }
+  }
+
   logSignup() {
     this.signupSubmitted.emit(this.signup.value);
   }
