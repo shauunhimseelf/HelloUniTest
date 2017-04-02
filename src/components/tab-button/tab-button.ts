@@ -12,6 +12,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class TabButtonComponent {
 
   @Input('text') textToUse;
+  @Input('icon') iconToUse;
+  @Input('selected') isSelected;
+
 
   @Output()
   tabPressed:EventEmitter<string> = new EventEmitter();
@@ -20,20 +23,21 @@ export class TabButtonComponent {
   buttonClasses: string;
   buttonIcon: string;
 
-  selected: boolean;
+  buttonSelected: boolean
 
-  constructor() {
-    this.buttonText = 'Button';
-    this.buttonIcon = "add";
-    this.selected = false;
+
+  constructor( ) {
+    this.buttonSelected = this.isSelected;
+    this.buttonIcon = this.iconToUse;
   }
 
-  ngAfterViewInit() {
+  ngAfterViewChecked() {
     this.buttonText = this.textToUse;
+    this.buttonIcon = this.iconToUse;
   }
 
   buttonToggle( evt ) {
-    this.selected = !this.selected;
+    this.buttonSelected = !this.buttonSelected;
     this.tabPressed.emit(this.buttonText);
   }
 

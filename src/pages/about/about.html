@@ -13,12 +13,13 @@
 
         <div class="tab_selector">
           <div class="tab_selectedContainer">
-            <p class="tab_selectedText">No labels selected.</p>
+            <!-- <tab-button *ngFor="let userLabel of userLabels" text="{{ userLabel }}" icon="close" selected="{{ true }}" (tabPressed)="removeLabel($event)" ></tab-button> -->
+            <p class="tab_selectedText" *ngIf="userLabels.length === 0">No labels selected.</p>
           </div>
           <ion-input type="text" value="" placeholder="Choose your own label..."></ion-input>
         </div>
         <div class="hu_buttonContainer">
-          <tab-button *ngFor="let label of labels" text="{{ label }}" (tabPressed)="handleLabelPressed($event)"></tab-button>
+          <tab-button *ngFor="let label of labels" text="{{ label }}" icon="add" (tabPressed)="handleLabelPressed($event)"></tab-button>
         </div>
 
       </div>
@@ -28,12 +29,12 @@
 
         <div class="tab_selector">
           <div class="tab_selectedContainer">
-            <p class="tab_selectedText">No lifestyles selected.</p>
+            <p class="tab_selectedText"  *ngIf="userLifestyles.length === 0">No lifestyles selected.</p>
           </div>
           <ion-input type="text" value="" placeholder="Choose your preferred lifestyle..."></ion-input>
         </div>
         <div class="hu_buttonContainer">
-          <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" (tabPressed)="handleLifestylePressed($event)"></tab-button>
+          <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" icon="add" (tabPressed)="handleLifestylePressed($event)"></tab-button>
         </div>
       </div>
 

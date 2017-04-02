@@ -24,6 +24,11 @@
         font-size: 1.2rem;
         text-align: center;
       }
+
+      .tab_selectedContainer {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   }
 

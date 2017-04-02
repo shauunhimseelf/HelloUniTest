@@ -9,6 +9,7 @@ export class AboutPage {
   labels = ['Out-going', 'Reserved', 'Sporty', 'Routine', 'Flexible', 'Neutral'];
   lifestyles = ['Fast', 'Party', 'Quiet', 'Posh', 'Budget', 'Neutral'];
 
+  // userLabels = ['Test 1', 'Test 2'];
   userLabels = [];
   userLifestyles = [];
 
@@ -18,7 +19,6 @@ export class AboutPage {
 
   @Output()
   aboutSubmitted:EventEmitter<Object> = new EventEmitter();
-
 
   // TODO Merge handleLabelPressed and handleLifestylePressed functions
 
@@ -34,6 +34,8 @@ export class AboutPage {
       this.userLabels.splice( arrIndex, 1 );
     }
 
+    console.log(this.userLabels);
+
   }
 
   handleLifestylePressed( evt ) {
@@ -48,10 +50,12 @@ export class AboutPage {
       this.userLifestyles.splice( arrIndex, 1 );
     }
 
+    console.log(this.userLabels);
+
   }
 
   removeLabel( evt ) {
-    console.log('removeLabel');
+    console.log( evt );
   }
 
   submitAbout() {
