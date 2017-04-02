@@ -12,16 +12,17 @@
       <div class="hu_tabPanel">
 
         <div class="tab_selector">
+          <h5>1. Choose some lables to describe you:</h5>
           <div class="tab_selectedContainer">
             <!-- <tab-button *ngFor="let userLabel of userLabels" text="{{ userLabel }}" icon="close" selected="{{ true }}" (tabPressed)="removeLabel($event)" ></tab-button> -->
-            <ul>
+            <ul *ngIf="userLabels.length !== 0">
               <li *ngFor="let userLabel of userLabels">{{userLabel}}</li>
             </ul>
             <p class="tab_selectedText" *ngIf="userLabels.length === 0">No labels selected.</p>
           </div>
           <form [formGroup]="addCustomLabelForm" (ngSubmit)="addCustomLabel()">
             <ion-item>
-              <ion-input type="text" formControlName="customLabel" placeholder="Choose your own label..."></ion-input>
+              <ion-input type="text" formControlName="customLabel" placeholder="Add your own..."></ion-input>
               <button ion-button item-right type="submit">Add</button>
             </ion-item>
           </form>
@@ -36,15 +37,16 @@
       <div class="hu_tabPanel">
 
         <div class="tab_selector">
+          <h5>2. Choose lifestyles that describe you:</h5>
           <div class="tab_selectedContainer">
-            <ul>
+            <ul *ngIf="userLabels.length !== 0">
               <li *ngFor="let userLifestyle of userLifestyles">{{userLifestyles}}</li>
             </ul>
             <p class="tab_selectedText" *ngIf="userLifestyles.length === 0">No lifestyles selected.</p>
           </div>
           <form [formGroup]="addCustomLifestyleForm" (ngSubmit)="addCustomLifestyle()">
             <ion-item>
-              <ion-input type="text" formControlName="customLifestyle" placeholder="Choose your own label..."></ion-input>
+              <ion-input type="text" formControlName="customLifestyle" placeholder="Add your own..."></ion-input>
               <button ion-button item-right type="submit">Add</button>
             </ion-item>
           </form>
