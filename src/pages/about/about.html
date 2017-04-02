@@ -12,7 +12,7 @@
       <div class="hu_tabPanel">
 
         <div class="tab_selector">
-          <h5>1. Choose some lables to describe you:</h5>
+          <h5>1. Choose some labels to describe you:</h5>
           <div class="tab_selectedContainer">
             <tab-button *ngFor="let userLabel of userLabels" text="{{ userLabel }}" icon="close" selected="{{ true }}" (tabPressed)="handleLabelPressed($event)" ></tab-button>
             <p class="tab_selectedText" *ngIf="userLabels.length === 0">No labels selected.</p>
