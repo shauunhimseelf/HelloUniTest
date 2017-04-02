@@ -42,7 +42,7 @@
           <form [formGroup]="addCustomLifestyleForm" (ngSubmit)="addCustomLifestyle()">
             <ion-item>
               <ion-input type="text" formControlName="customLifestyle" placeholder="Add your own..."></ion-input>
-              <button ion-button item-right type="submit" [disabled]="!addCustomLifestyleForm.valid">Add</button>
+              <button class="addLabelButton" ion-button item-right type="submit" [disabled]="!addCustomLifestyleForm.valid">Add</button>
             </ion-item>
           </form>
           <div class="hu_buttonContainer">
