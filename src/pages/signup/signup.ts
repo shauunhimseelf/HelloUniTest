@@ -18,7 +18,7 @@ export class SignupPage {
       nationality: ['', Validators.required],
       current_school: ['', Validators.required],
       current_major: ['', Validators.required],
-      current_gpa: ['', Validators.required]
+      current_gpa: ['', Validators.compose([Validators.required, Validators.pattern('[0-9]*$') ])]
     })
   }
 
