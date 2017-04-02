@@ -31,7 +31,7 @@ export class TabButtonComponent {
     this.buttonIcon = this.iconToUse;
   }
 
-  ngAfterViewChecked() {
+  ngAfterViewInit() {
     this.buttonText = this.textToUse;
     this.buttonIcon = this.iconToUse;
   }

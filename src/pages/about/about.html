@@ -14,12 +14,20 @@
         <div class="tab_selector">
           <div class="tab_selectedContainer">
             <!-- <tab-button *ngFor="let userLabel of userLabels" text="{{ userLabel }}" icon="close" selected="{{ true }}" (tabPressed)="removeLabel($event)" ></tab-button> -->
+            <ul>
+              <li *ngFor="let userLabel of userLabels">{{userLabel}}</li>
+            </ul>
             <p class="tab_selectedText" *ngIf="userLabels.length === 0">No labels selected.</p>
           </div>
-          <ion-input type="text" value="" placeholder="Choose your own label..."></ion-input>
-        </div>
-        <div class="hu_buttonContainer">
-          <tab-button *ngFor="let label of labels" text="{{ label }}" icon="add" (tabPressed)="handleLabelPressed($event)"></tab-button>
+          <form [formGroup]="addCustomLabelForm" (ngSubmit)="addCustomLabel()">
+            <ion-item>
+              <ion-input type="text" formControlName="customLabel" placeholder="Choose your own label..."></ion-input>
+              <button ion-button item-right type="submit">Add</button>
+            </ion-item>
+          </form>
+          <div class="hu_buttonContainer">
+            <tab-button *ngFor="let label of labels" text="{{ label }}" icon="add" (tabPressed)="handleLabelPressed($event)"></tab-button>
+          </div>
         </div>
 
       </div>
@@ -29,17 +37,26 @@
 
         <div class="tab_selector">
           <div class="tab_selectedContainer">
-            <p class="tab_selectedText"  *ngIf="userLifestyles.length === 0">No lifestyles selected.</p>
+            <ul>
+              <li *ngFor="let userLifestyle of userLifestyles">{{userLifestyles}}</li>
+            </ul>
+            <p class="tab_selectedText" *ngIf="userLifestyles.length === 0">No lifestyles selected.</p>
           </div>
-          <ion-input type="text" value="" placeholder="Choose your preferred lifestyle..."></ion-input>
+          <form [formGroup]="addCustomLifestyleForm" (ngSubmit)="addCustomLifestyle()">
+            <ion-item>
+              <ion-input type="text" formControlName="customLifestyle" placeholder="Choose your own label..."></ion-input>
+              <button ion-button item-right type="submit">Add</button>
+            </ion-item>
+          </form>
+          <div class="hu_buttonContainer">
+            <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" icon="add" (tabPressed)="handleLifestylePressed($event)"></tab-button>
+          </div>
         </div>
-        <div class="hu_buttonContainer">
-          <tab-button *ngFor="let lifestyle of lifestyles" text="{{ lifestyle }}" icon="add" (tabPressed)="handleLifestylePressed($event)"></tab-button>
-        </div>
+
       </div>
 
       <button class="nextButton" ion-button (click)="submitAbout()">Go</button>
-    </div>
 
+    </div>
   </div>
 </ion-content>

@@ -9,11 +9,14 @@
       padding: 1rem;
       border: 1px solid #efefef;
 
+      ion-item {
+        border-radius: 0!important;
+      }
+
       ion-input {
 
         input {
           text-align: left !important;
-          border: 1px solid #efefef;
           font-size: 1.5rem;
           margin: 0;
         }

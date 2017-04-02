@@ -1,4 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'page-about',
@@ -13,8 +15,17 @@ export class AboutPage {
   userLabels = [];
   userLifestyles = [];
 
-  constructor() {
+  private addCustomLabelForm : FormGroup;
+  private addCustomLifestyleForm : FormGroup;
 
+  constructor( private formBuilder: FormBuilder ) {
+    this.addCustomLabelForm = this.formBuilder.group({
+      customLabel: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.minLength(3)])]
+    })
+
+    this.addCustomLifestyleForm = this.formBuilder.group({
+      customLifestyle: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z -]*'), Validators.minLength(3)])]
+    })
   }
 
   @Output()
@@ -56,6 +67,25 @@ export class AboutPage {
 
   removeLabel( evt ) {
     console.log( evt );
+  }
+
+  addCustomLabel( ){
+    const arrIndex = this.userLabels.indexOf(this.addCustomLabelForm.value.customLabel);
+    if(arrIndex === -1)
+    {
+      this.userLabels.push( this.addCustomLabelForm.value.customLabel );
+    }
+    this.addCustomLabelForm.reset();
+    console.log(this.userLabels);
+  }
+
+  addCustomLifestyle(){
+    const arrIndex = this.userLifestyles.indexOf(this.addCustomLifestyleForm.value.customLabel);
+    if(arrIndex === -1)
+    {
+      this.userLifestyles.push( this.addCustomLifestyleForm.value.customLifestyle );
+    }
+    console.log(this.userLifestyles);
   }
 
   submitAbout() {
