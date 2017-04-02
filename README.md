@@ -16,12 +16,12 @@ In my own projects, I'd always aim to use as many device specific styles as poss
 
 ## Web browser styles
 
-The Ionic components in a web browser now use the Material Design styles, so it will bring up a MD-style select box for the gender and nationality drop down boxes, rather than the browser defaults as per [https://github.com/driftyco/ionic/issues/6003](Ionic GitHub issue 6003).
+The Ionic components in a web browser now use the Material Design styles, so it will bring up a MD-style select box for the gender and nationality drop down boxes, rather than the browser defaults as per [Ionic GitHub issue 6003](https://github.com/driftyco/ionic/issues/6003).
 
 
 ## ngAfterViewInit() hack
 
-As per [https://github.com/angular/angular/issues/6005](Angular GitHub issue 6005), theres an error on populating the tab-button component after it's been rendered - the code here uses a hack using `setTimeout` to fix this - I've followed the thread and would aim to fix when there is an agreement on how it should be done!
+As per [Angular GitHub issue 6005](https://github.com/angular/angular/issues/6005), theres an error on populating the tab-button component after it's been rendered - the code here uses a hack using `setTimeout` to fix this - I've followed the thread and would aim to fix when there is an agreement on how it should be done!
 
 
 ---
