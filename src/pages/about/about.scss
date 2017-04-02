@@ -1,4 +1,6 @@
 @import '../../app/app.scss';
+@import "../../app/partials/_mixins.scss";
+
 
 .hu_aboutPage {
 
@@ -23,6 +25,16 @@
           text-align: left !important;
           font-size: 1.5rem;
           margin: 0;
+        }
+      }
+
+      .addLabelButton {
+        display: none;
+      }
+
+      @include desktop {
+        .addLabelButton {
+          display: block;
         }
       }
 
