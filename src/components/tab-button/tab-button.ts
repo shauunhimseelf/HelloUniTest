@@ -32,12 +32,15 @@ export class TabButtonComponent {
   }
 
   ngAfterViewInit() {
-    this.buttonText = this.textToUse;
-    this.buttonIcon = this.iconToUse;
+    setTimeout(() => {
+      this.buttonText = this.textToUse;
+      this.buttonIcon = this.iconToUse;
+      this.buttonSelected = this.isSelected;
+    }, 0);
+
   }
 
   buttonToggle( evt ) {
-    this.buttonSelected = !this.buttonSelected;
     this.tabPressed.emit(this.buttonText);
   }
 

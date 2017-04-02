@@ -45,8 +45,6 @@ export class AboutPage {
       this.userLabels.splice( arrIndex, 1 );
     }
 
-    console.log(this.userLabels);
-
   }
 
   handleLifestylePressed( evt ) {
@@ -61,12 +59,18 @@ export class AboutPage {
       this.userLifestyles.splice( arrIndex, 1 );
     }
 
-    console.log(this.userLabels);
-
   }
 
   removeLabel( evt ) {
-    console.log( evt );
+    const labelText = evt;
+    const arrIndex = this.userLabels.indexOf(labelText);
+    this.userLabels.splice( arrIndex, 1 );
+  }
+
+  removeLifestyle( evt ) {
+    const lifestyleText = evt;
+    const arrIndex = this.userLifestyles.indexOf(lifestyleText);
+    this.userLifestyles.splice( arrIndex, 1 );
   }
 
   addCustomLabel( ){
@@ -76,16 +80,14 @@ export class AboutPage {
       this.userLabels.push( this.addCustomLabelForm.value.customLabel );
     }
     this.addCustomLabelForm.reset();
-    console.log(this.userLabels);
   }
 
   addCustomLifestyle(){
-    const arrIndex = this.userLifestyles.indexOf(this.addCustomLifestyleForm.value.customLabel);
+    const arrIndex = this.userLifestyles.indexOf(this.addCustomLifestyleForm.value.customLifestyle);
     if(arrIndex === -1)
     {
       this.userLifestyles.push( this.addCustomLifestyleForm.value.customLifestyle );
     }
-    console.log(this.userLifestyles);
   }
 
   submitAbout() {

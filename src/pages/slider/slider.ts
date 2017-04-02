@@ -31,7 +31,7 @@ export class SliderPage {
   aboutSubmitted( evt ) {
     this.slides.slideTo(2, 500);
     this.updateUserDetails(evt);
-    console.log(this.userDetails);
+    console.log(JSON.stringify(this.userDetails));
   }
 
   resetSubmitted( evt ) {
